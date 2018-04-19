@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Header from './Header'
-import MonthTable from './MonthTable'
-import DaysTable from './DaysTable'
+import TableHead from './TableHead'
+import MainTable from './MainTable'
 
 class App extends React.Component {
   constructor (props) {
@@ -19,8 +19,8 @@ class App extends React.Component {
     return (
       <div className='app'>
         <Header />
-        <MonthTable />
-        <DaysTable />
+        <TableHead />
+        <MainTable />
       </div>
     )
   }
