@@ -1,22 +1,25 @@
 import React from 'react'
-import {getMonth, getYear, generateMonthTable} from '../utils'
-const monthInfo = generateMonthTable()
+import utils from '../utils'
 
-const MainTable = () => {
-  return (
+import WeekTable from './WeekTable'
+const monthInfo = utils.generateMonthTable()
+
+class MainTable extends React.Component {
+  constructor (props) {
+    super (props)
+    this.state = {
+
+    }
+  }
+
+  render() {
+    return (
       <div className="container">
-        <h1>{`${getMonth()} have ${monthInfo.daysOfMonth} days. First day is ${monthInfo.firstDay} `}</h1>        
+        <h1>{`${utils.getMonth()} have ${monthInfo.daysOfMonth} days. First day is ${monthInfo.firstDay} `}</h1>        
         <div className="grid-calendar">
           <div className="row calendar-week-header">
-            <div className="col-xs-1 grid-cell"><div><div><span>S</span></div></div></div>
-            <div className="col-xs-1 grid-cell"><div><div><span>M</span></div></div></div>
-            <div className="col-xs-1 grid-cell"><div><div><span>T</span></div></div></div>
-            <div className="col-xs-1 grid-cell"><div><div><span>W</span></div></div></div>
-            <div className="col-xs-1 grid-cell"><div><div><span>T</span></div></div></div>
-            <div className="col-xs-1 grid-cell"><div><div><span>F</span></div></div></div>
-            <div className="col-xs-1 grid-cell"><div><div><span>S</span></div></div></div>
+            <WeekTable weekday={utils.weekDayArr()}/>
           </div>
-
           <div className="row calendar-week">
             <div className="col-xs-1 grid-cell previous-month"><div><div><span>31</span></div></div></div>
             <div className="col-xs-1 grid-cell"><div><div><span>1</span></div></div></div>
@@ -68,7 +71,8 @@ const MainTable = () => {
           </div>
         </div>
       </div>
-  )
+    )
+  }
 }
 
 export default MainTable
