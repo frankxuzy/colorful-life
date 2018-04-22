@@ -1,4 +1,5 @@
 import React from "react"
+import {Link, withRouter} from 'react-router-dom'
 
 class DateTable extends React.Component {
   constructor (props) {
@@ -6,6 +7,27 @@ class DateTable extends React.Component {
     this.state = {
 
     }
+    this.addActivities = this.addActivities.bind(this)
+  }
+
+  addActivities(day) {
+    const yearStr = this.props.year.toString()
+    const monthStr = (() => {
+      if(this.props.month + 1 < 10) {
+        return 0 + (this.props.month + 1).toString()
+      } else {
+        return (this.props.month + 1).toString()
+      }
+    })()
+    const dayStr = (() => {
+      if(Number(day) < 10) {
+        return 0 + day.toString()
+      } else {
+        return day.toString()
+      }
+    })()
+    const date = yearStr + monthStr + dayStr
+    this.props.history.push(`/calendar/${date}`)
   }
   // className previous-month next-month
   render() {
@@ -13,18 +35,18 @@ class DateTable extends React.Component {
       <div className="datetable">
         <div className="row calendar-week">
           {
-            this.props.dateGridArr[0].map((date, index) => 
-              (<div key={index} className="col-xs-1 grid-cell previous-month"><div><div><span>{date}</span></div></div></div>)
+            this.props.dateGridArr[0].map((day, index) => 
+              (<div key={index} onClick={() => this.addActivities(day)} className="col-xs-1 grid-cell previous-month"><div><div><span>{day}</span></div></div></div>)
             )
           }
         {
-            this.props.dateGridArr[1].map((date, index) => 
-              (<div key={index} className="col-xs-1 grid-cell"><div><div><span>{date}</span></div></div></div>)
+            this.props.dateGridArr[1].map((day, index) => 
+              (<div key={index} onClick={() => this.addActivities(day)} className="col-xs-1 grid-cell"><div><div><span>{day}</span></div></div></div>)
             )
           }
         {
-            this.props.dateGridArr[2].map((date, index) => 
-              (<div key={index} className="col-xs-1 grid-cell next-month"><div><div><span>{date}</span></div></div></div>)
+            this.props.dateGridArr[2].map((day, index) => 
+              (<div key={index} onClick={this.addEvent} className="col-xs-1 grid-cell next-month"><div><div><span>{day}</span></div></div></div>)
             )
           }
         </div>
@@ -33,4 +55,5 @@ class DateTable extends React.Component {
   }
 }
 
-export default DateTable
+export default withRouter(DateTable)
+

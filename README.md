@@ -25,3 +25,7 @@ console.log(date1);
 * Fixed css issue, delete TableHead component
 * Added ```gotoPreviousMonth``` and ```gotoNextMonth``` function. 
 * Finished the basic function of the calendar
+* Add function when click date grid redirect to date input page
+
+## Todo List
+ 

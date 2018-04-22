@@ -61,7 +61,10 @@ class MainTable extends React.Component {
           <div className="row calendar-week-header">
             <WeekTable weekday={utils.weekDayArr()}/>
           </div>
-            <DateTable dateGridArr={utils.dateGridGenerator(this.state.year, this.state.month)} />
+            <DateTable
+              year = {this.state.year}
+              month = {this.state.month}
+              dateGridArr={utils.dateGridGenerator(this.state.year, this.state.month)} />
         </div>
       </div>
     )
