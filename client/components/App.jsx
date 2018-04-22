@@ -18,9 +18,12 @@ class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <Header />
-        <TableHead />
-        <MainTable />
+        <div className="container">
+          <h1 className="header">Colorful Life</h1>    
+          <Header />
+          <TableHead />
+          <MainTable />
+        </div>  
       </div>
     )
   }

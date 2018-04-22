@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server & yarn build --watch",
     "build": "webpack --config client/webpack.config.js",
-    "test": "jest"
+    "test": "jest",
+    "css": "sass server/public/style.scss server/public/style.css"
   },
   "babel": {
     "presets": [
@@ -16,8 +17,8 @@
   },
   "jest": {
     "setupFiles": [
-      "./test/client/config/jsdom.js",
-      "./test/client/config/enzyme.js"
+      "./tests/client/config/jsdom.js",
+      "./tests/client/config/enzyme.js"
     ]
   },
   "dependencies": {

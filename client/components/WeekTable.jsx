@@ -10,7 +10,7 @@ class WeekTable extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="weektable">
         {
           // why I cannot use forEach here?
           this.props.weekday.map(day => {

@@ -10,6 +10,22 @@
   box-sizing: border-box;
 }
 
+.tablehead {
+  text-align: center;
+}
+
+.tablehead-btn {
+  display: inline-block;
+}
+
+.tablehead-span {
+  margin: auto 10%;
+}
+
+.header {
+  text-align: center;
+}
+
 .container {
   max-width: 1000px;
   margin-left: auto;
