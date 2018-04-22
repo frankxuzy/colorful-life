@@ -78,7 +78,5 @@ module.exports = {
   getMonth,
   getMonthStr,
   weekDayArr,
-  firstDay,
-  lastDay,
   dateGridGenerator
 }
