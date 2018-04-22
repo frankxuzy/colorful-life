@@ -22,3 +22,4 @@ console.log(date1);
 ### 21/04/2018
 
 * Refactor the utils, rewrite the Date ralated function
+* Fix css issue, delete TableHead component

@@ -18,8 +18,8 @@ function getMonth() {
   return (new Date()).getMonth()
 }
 
-function getMonthStr() {
-  return months[getMonth()]
+function getMonthStr(month = getMonth()) {
+  return months[month]
 }
 
 function weekDayArr() {

@@ -17,17 +17,11 @@ class DateTable extends React.Component {
               (<div key={index} className="col-xs-1 grid-cell previous-month"><div><div><span>{date}</span></div></div></div>)
             )
           }
-        </div>
-
-        <div className="row calendar-week">
         {
             this.props.dateGridArr[1].map((date, index) => 
               (<div key={index} className="col-xs-1 grid-cell"><div><div><span>{date}</span></div></div></div>)
             )
           }
-        </div>
-
-        <div className="row calendar-week">
         {
             this.props.dateGridArr[2].map((date, index) => 
               (<div key={index} className="col-xs-1 grid-cell next-month"><div><div><span>{date}</span></div></div></div>)
