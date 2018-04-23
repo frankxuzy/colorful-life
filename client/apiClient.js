@@ -2,9 +2,9 @@ import request from 'superagent'
 
 const rootUrl = '/api/v1'
 
-export function getFruits () {
-  return request.get(rootUrl + '/fruits')
+export function getOneDay (date) {
+  return request.get(rootUrl + `/calendar/${date}`)
     .then(res => {
-      return res.body.fruits
+      return res.body
     })
 }

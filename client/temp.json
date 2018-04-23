@@ -1,0 +1,47 @@
+// 20180423173240
+// http://localhost:3000/api/v1/calendar/20180412
+
+[
+  {
+    "id": 1001,
+    "date": 20180412,
+    "hour": 21,
+    "activity": "activity1",
+    "tag": 3
+  },
+  {
+    "id": 1004,
+    "date": 20180412,
+    "hour": 4,
+    "activity": "activity1",
+    "tag": 3
+  },
+  {
+    "id": 1007,
+    "date": 20180412,
+    "hour": 7,
+    "activity": "activity1",
+    "tag": 3
+  },
+  {
+    "id": 1010,
+    "date": 20180412,
+    "hour": 13,
+    "activity": "activity1",
+    "tag": 3
+  },
+  {
+    "id": 1013,
+    "date": 20180412,
+    "hour": 15,
+    "activity": "activity1",
+    "tag": 3
+  },
+  {
+    "id": 1016,
+    "date": 20180412,
+    "hour": 10,
+    "activity": "activity1",
+    "tag": 3
+  }
+]
