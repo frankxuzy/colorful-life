@@ -3,8 +3,8 @@
 // const date = function(year = null, month=null, day = 0) {
 //   return new Date(year, month, day)
 // } 
-const months = [ "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December" ]
+const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
 
 const weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] 
 const totalGrids = 42

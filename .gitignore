@@ -59,3 +59,6 @@ typings/
 
 # webpack bundle files
 bundle.*
+
+# sqlite3
+dev.sqlite3
