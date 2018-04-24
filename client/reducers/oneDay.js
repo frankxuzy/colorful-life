@@ -2,7 +2,7 @@ import utils from '../utils'
 const initState = utils.getInitDayArr()
 const oneDay = (state = initState, action) => {
   switch (action.type) {
-    case 'UPDATE_ACTIVITY_FROM_DB':
+    case 'UPDATE_ACTIVITIES_FROM_DB':
       const index = state.findIndex(hourData => hourData.hour === action.hour)
       return [
         ...state.slice(0, index),
