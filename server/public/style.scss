@@ -33,6 +33,16 @@ $column-width: percentage(1/$number-of-days);
   text-align: center;
 }
 
+// activity input call
+.activity-input {
+  display: block; padding: 0; margin: 0; border: none; width: 100%;
+  height:100%; background: transparent;
+}
+td {
+  margin: 0; 
+  padding: 0;
+  height: 50px;
+}
 
 .container {
   max-width: 1000px;
@@ -68,7 +78,7 @@ $column-width: percentage(1/$number-of-days);
     padding-bottom: 10px;
     height: auto;
   }
-  
+
   .grid-cell {
     display: inline-block;
     float: left;
