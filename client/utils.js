@@ -10,6 +10,21 @@ const weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 const totalGrids = 42
 const totalDateRows = 6
 
+function getInitDayArr() {
+  const dayArr = []  
+  for(let i = 6; i < 24; i++) {
+    const initObj = {
+      id: 0,
+      date: 0,
+      hour: i,
+      activity: '',
+      tag: 0
+    }
+    dayArr.push(initObj)
+  }
+  return dayArr
+}
+
 function getYear() {
   return (new Date()).getFullYear()
 }
@@ -78,5 +93,6 @@ module.exports = {
   getMonth,
   getMonthStr,
   weekDayArr,
-  dateGridGenerator
+  dateGridGenerator,
+  getInitDayArr
 }
