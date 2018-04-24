@@ -26,6 +26,22 @@
   text-align: center;
 }
 
+.activity-input {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+td {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
 .container {
   max-width: 1000px;
   margin-left: auto;

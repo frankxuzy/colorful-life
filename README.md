@@ -38,7 +38,7 @@ console.log(date1);
   1. 1 - blue - guilt free play time
   2. 2 - green - rest time
   3. 3 - yellow - quality work time
-  4. 4 - orange - mandatory work time
+  4. 4 - cyan - mandatory work time
   5. 5 - red - procrastination time
 
 * Everytime I clicked the date. 
