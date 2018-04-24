@@ -27,6 +27,13 @@ console.log(date1);
 * Finished the basic function of the calendar
 * Add function when click date grid redirect to date activities input page
 
+### 24/04/2018
+
+* Try to integrate redux into project
+* Create a getInitDayArr in utils to build the default state of one day page.
+* Create a UPDATE_ACTIVITIES_FROM_DB to update the change.
+* Create oneDay reducer to handle this action
+
 ## Todo List
 * Thinking about data structure 
 - table name "Activities". 
