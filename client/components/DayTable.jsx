@@ -1,7 +1,7 @@
 import React from 'react'
 import {getOneDay} from '../apiClient'
 
-class AddActivities extends React.Component {
+class DayTable extends React.Component {
   constructor (props) {
     super (props)
     this.state = {
@@ -135,4 +135,4 @@ class AddActivities extends React.Component {
   }
 }
 
-export default AddActivities
+export default DayTable
