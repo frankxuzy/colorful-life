@@ -25,6 +25,11 @@ function getInitDayArr() {
   return dayArr
 }
 
+function handleTag (tagIndex) {
+  const tags = ["guilt free play", "rest", "quality work", "mandatory work", "procrastination"]
+  return tags[tagIndex - 1]
+}
+
 function getYear() {
   return (new Date()).getFullYear()
 }
@@ -94,5 +99,6 @@ module.exports = {
   getMonthStr,
   weekDayArr,
   dateGridGenerator,
-  getInitDayArr
+  getInitDayArr,
+  handleTag
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import {handleTag} from '../utils'
 
 class HourTable extends React.Component {
   constructor(props) {
@@ -36,8 +37,8 @@ class HourTable extends React.Component {
         </tr> */}
         <tr className="">
           <th scope="row">{this.props.hour}</th>
-          <td>{this.props.activity}</td>
-          <td>{this.props.tag}</td>
+          <td><input onKeyUp={e => updateActivity(e)} className="activity-input" type="text" value={this.props.activity}/></td>
+          <td>{handleTag(this.props.tag)}</td>
         </tr>
       </tbody>
     )
