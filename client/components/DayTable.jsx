@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 import {getOneDay} from '../apiClient'
 import HourTable from './HourTable'
+import { showActivitiesFromDb } from '../actions';
 
 
 class DayTable extends React.Component {
@@ -14,20 +15,19 @@ class DayTable extends React.Component {
     // }
   }
 
-  // componentDidMount() {
-  //   getOneDay(this.state.date)
-  //     .then(day => {
-  //       this.setState({
-  //         activities: [...day]
-  //       })
-  //     })
-  // }
+  componentDidMount() {
+    const date = Number(this.props.match.params.date)    
+    this.props.dispatch(
+      showActivitiesFromDb(date)
+    )
+  }
  
   
   render () {
+
     return (
       <div className="DayTable">
-      <h1>{this.props.match.params.date}</h1>
+      <h1>{Number(this.props.match.params.date)}</h1>
           {/* {this.state.activities.map(activity => (
             <li>hour: {activity.hour} activity: {activity.activity} tag: {activity.tag}</li>
           ))} */}
@@ -40,7 +40,7 @@ class DayTable extends React.Component {
               </tr>
             </thead>
             {this.props.dayTable.map(hourTable => {
-              return <HourTable {...hourTable}/>
+              return <HourTable key={hourTable.hour} {...hourTable}/>
             })}
           </table>
 
