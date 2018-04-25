@@ -8,10 +8,10 @@ class DateTable extends React.Component {
     this.state = {
 
     }
-    this.addActivities = this.addActivities.bind(this)
+    this.showDayActivity = this.showDayActivity.bind(this)
   }
 
-  addActivities(day) {
+  showDayActivity(day) {
     const yearStr = this.props.year.toString()
     const monthStr = (() => {
       if(this.props.month + 1 < 10) {
@@ -37,17 +37,17 @@ class DateTable extends React.Component {
         <div className="row calendar-week">
           {
             this.props.dateGridArr[0].map((day, index) => 
-              (<div key={index} onClick={() => this.addActivities(day)} className="col-xs-1 grid-cell previous-month"><div><div><span>{day}</span></div></div></div>)
+              (<div key={index} onClick={() => this.showDayActivity(day)} className="col-xs-1 grid-cell previous-month"><div><div><span>{day}</span></div></div></div>)
             )
           }
         {
             this.props.dateGridArr[1].map((day, index) => 
-              (<div key={index} onClick={() => this.addActivities(day)} className="col-xs-1 grid-cell"><div><div><span>{day}</span></div></div></div>)
+              (<div key={index} onClick={() => this.showDayActivity(day)} className="col-xs-1 grid-cell"><div><div><span>{day}</span></div></div></div>)
             )
           }
         {
             this.props.dateGridArr[2].map((day, index) => 
-              (<div key={index} onClick={this.addEvent} className="col-xs-1 grid-cell next-month"><div><div><span>{day}</span></div></div></div>)
+              (<div key={index} onClick={() => this.showDayActivity(day)} className="col-xs-1 grid-cell next-month"><div><div><span>{day}</span></div></div></div>)
             )
           }
         </div>

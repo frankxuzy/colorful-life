@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import reducer from './oneDay' 
+import dayTable from './dayTable' 
 
 export default combineReducers({
-  oneDay
+  dayTable
 })
