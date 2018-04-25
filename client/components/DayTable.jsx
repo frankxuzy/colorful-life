@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {getOneDay} from '../apiClient'
 import HourTable from './HourTable'
 import { showActivitiesFromDb } from '../actions';
-
+import {getInitDayArr} from '../utils'
 
 class DayTable extends React.Component {
   constructor (props) {
@@ -27,24 +27,19 @@ class DayTable extends React.Component {
 
     return (
       <div className="DayTable">
-      <h1>{Number(this.props.match.params.date)}</h1>
-          {/* {this.state.activities.map(activity => (
-            <li>hour: {activity.hour} activity: {activity.activity} tag: {activity.tag}</li>
-          ))} */}
-          <table className="table">
-            <thead>
-              <tr>
-                <th style={{width: "10%"}} scope="col">Time</th>
-                <th scope="col">Activity</th>
-                <th style={{width: "20%"}} scope="col">Tag</th>
-              </tr>
-            </thead>
-            {this.props.dayTable.map(hourTable => {
-              return <HourTable key={hourTable.hour} {...hourTable}/>
-            })}
-          </table>
-
-        {/* <form action="/" method="post"></form> */}
+        <h1>{Number(this.props.match.params.date)}</h1>
+        <table className="table">
+          <thead>
+            <tr>
+              <th style={{width: "10%"}} scope="col">Time</th>
+              <th scope="col">Activity</th>
+              <th style={{width: "20%"}} scope="col">Tag</th>
+            </tr>
+          </thead>
+          {this.props.dayTable.map(hourData => {
+            return <HourTable key={hourData.hour} {...hourData}/>
+          })}
+        </table>
       </div>
     )
   }

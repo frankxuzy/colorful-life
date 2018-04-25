@@ -12,7 +12,7 @@ const totalDateRows = 6
 
 function getInitDayArr() {
   const dayArr = []  
-  for(let i = 1; i < 24; i++) {
+  for(let i = 6; i < 24; i++) {
     const initObj = {
       id: 0,
       date: 0,
