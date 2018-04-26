@@ -16,5 +16,6 @@ function updateActivity (date, hour, activity, conn = connection) {
     .where({
       date,
       hour
-    }).update({activity})
+    })
+    .update('activity', activity)
 }

@@ -9,8 +9,14 @@ export function getOneDay (date) {
     })
 }
 
-// export function updateDayTable (date) {
-//   return request.put(rootUrl + `/calendar/${date}`)
-//     .set('Content-Type', 'application/json')
-//     .send('{"name":"tj","pet":"tobi"}')
-// }
+export function updateDayTable (data) {
+  return request.put(rootUrl + `/calendar/${data.date}`)
+  // need set if send in json string
+    // .set('Content-Type', 'application/json')
+    .send({
+      date: data.date,
+      hour:data.hour,
+      activity: data.activity
+    })
+}
+

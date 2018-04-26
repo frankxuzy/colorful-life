@@ -37,7 +37,7 @@ class DayTable extends React.Component {
             </tr>
           </thead>
           {this.props.dayTable.map(hourData => {
-            return <HourTable key={hourData.hour} {...hourData}/>
+            return <HourTable key={hourData.hour} hourData={hourData}/>
           })}
         </table>
       </div>
