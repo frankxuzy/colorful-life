@@ -34,6 +34,38 @@ console.log(date1);
 * Create a UPDATE_ACTIVITIES_FROM_DB to update the change.
 * Create oneDay reducer to handle this action
 
+### 26/04/2018 
+
+* Update activity function added.
+
+## Code Structure
+  - package.json
+  - seeds and migrations
+  - server
+    - ```index, server``` start server and setup middleware
+    - ```db``` communicate with database
+    - ```calendar``` http router 
+    - ```calendarApi``` api router communicate with db
+    - ```public``` html and css
+  - client
+    - actions
+      - ```index```
+    - components
+      - ```App```
+        - ```Header```
+        - ```MainTable```
+          - Date print and button
+          - ```WeekTable```
+          - ```DateTable```
+            - thead
+            - ```HourTable```
+        - ```DayTable```
+    - reducers
+      - index
+      - ```dayTable```
+      
+<img src="./Components.JPG" alt=""/>
+
 ## Todo List
 * Thinking about data structure 
 - table name "Activities". 
