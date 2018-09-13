@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server & yarn build --watch",
+    "start": "nodemon server & yarn build --watch",
     "build": "webpack --config client/webpack.config.js",
     "test": "jest",
     "css": "sass server/public/style.scss server/public/style.css"
@@ -44,6 +44,6 @@
     "react-router-dom": "^4.2.2",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.8.2",
-    "webpack": "3"
+    "webpack": "^4.17.1"
   }
 }

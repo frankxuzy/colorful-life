@@ -1,18 +1,18 @@
-
+// @ts-check
 // Wed Feb 28 2018 00:00:00 GMT+1300 (NZDT)
 // const date = function(year = null, month=null, day = 0) {
 //   return new Date(year, month, day)
-// } 
-const months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+// }
+const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
 
-const weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] 
+const weekDay = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const totalGrids = 42
 const totalDateRows = 6
 
-function getInitDayArr(date) {
-  const dayArr = []  
-  for(let i = 6; i < 24; i++) {
+function getInitDayArr (date) {
+  const dayArr = []
+  for (let i = 6; i < 24; i++) {
     const initObj = {
       id: 0,
       date: date,
@@ -26,36 +26,36 @@ function getInitDayArr(date) {
 }
 
 function handleTag (tagIndex) {
-  const tags = ["guilt free play", "rest", "quality work", "mandatory work", "procrastination"]
+  const tags = ['guilt free play', 'rest', 'quality work', 'mandatory work', 'procrastination']
   return tags[tagIndex - 1]
 }
 
-function getYear() {
+function getYear () {
   return (new Date()).getFullYear()
 }
 
-function getMonth() {
+function getMonth () {
   return (new Date()).getMonth()
 }
 
-function getMonthStr(month = getMonth()) {
+function getMonthStr (month = getMonth()) {
   return months[month]
 }
 
-function weekDayArr() {
+function weekDayArr () {
   return weekDay
 }
 
-function firstDay(year = getYear(), month = getMonth()) {
+function firstDay (year = getYear(), month = getMonth()) {
   return (new Date(year, month, 1)).getDay()
 }
-// give year and month. return how many days of this month 
+// give year and month. return how many days of this month
 // and the first day of this month is what day of a week
-function lastDay(year = getYear(), month = getMonth()) {
+function lastDay (year = getYear(), month = getMonth()) {
   return (new Date(year, month + 1, 0)).getDate()
 }
 
-function dateGridGenerator(year = getYear(), month = getMonth()) {
+function dateGridGenerator (year = getYear(), month = getMonth()) {
   const dateArr = []
   const headPaddingArr = []
   const tailPaddingArr = []
@@ -76,8 +76,8 @@ function dateGridGenerator(year = getYear(), month = getMonth()) {
     tailPaddingArr.push(k)
   }
   return [[...headPaddingArr], [...dateArr], [...tailPaddingArr]]
-    // headPaddingLen: headPaddingArr.length,
-    // tailPaddingLen: tailPaddingArr.length
+  // headPaddingLen: headPaddingArr.length,
+  // tailPaddingLen: tailPaddingArr.length
 }
 // return [[dateRow1],[dateRow2],[dateRow3],[dateRow4],[dateRow5]]
 // function dateRowWrapper (year = getYear(), month = getMonth()) {

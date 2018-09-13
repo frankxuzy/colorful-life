@@ -1,4 +1,3 @@
-
 exports.seed = (knex, Promise) => {
   // Deletes ALL existing entries
   return knex('Activities').del()
@@ -25,4 +24,4 @@ exports.seed = (knex, Promise) => {
         {id: 1018, date: 20180423, hour: 23, activity: 'activity3', tag: 2}
       ])
     })
-  }
+}
